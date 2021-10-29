@@ -40,25 +40,16 @@ input:active, input:focus {
     outline: none;
 }
 
-div.svg {
-    width: 100vw;
-    height: 100vh;
-    background: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 svg {
-        /* position: absolute;
-        top: 0;
-        left: 0; */
+    position: absolute;
+    bottom: -400px;
+    right: 0;
     width: 100%;
     transform-origin: center center;
 }
 
 svg path {
-    transform: translate(50vh, 20vw);
+    /* transform: translate(50vh, 20vw); */
 }
     
 
@@ -179,10 +170,6 @@ header {
         font-size: 16px;
     }
 
-    svg {
-        width: 80%;
-    }
-
     div.container {
         width: 100vw;
     }
@@ -208,12 +195,6 @@ header {
     div.container {
         grid-template-rows: 10vh 1fr 1fr;
         grid-template-columns: 1fr;
-    }
-
-    svg {
-        /* width: 400px;
-        height: 400px;
-        bottom: -200px; */
     }
 
     header {
