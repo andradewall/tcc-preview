@@ -46,6 +46,7 @@ svg {
     right: 0;
     width: 100%;
     transform-origin: center center;
+    z-index: 1;
 }
 
 svg path {
@@ -86,6 +87,7 @@ header {
 .container-primario {
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .container-primario-wrapper {
