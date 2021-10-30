@@ -1,4 +1,4 @@
-@import url(vars.css);
+@import url(colors.css);
 @import url(animations.css);
 
 *, *::after, *::before {
@@ -12,12 +12,27 @@ html, body {
     width: 100vw;
     background-color: var(--black);
     color: var(--white);
-    font: var(--body-d1);
+    font: 400 16px/140% 'Source Sans Pro', sans-serif;
     overflow: hidden;
 }
 
+header {
+    grid-column: 1 / -1;
+    text-align: center;
+    font: 600 24px/80% 'Sora', sans-serif;;
+
+    background: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
-    font: var(--h1);
+    font: 400 24px/100% 'Sora', sans-serif;
     text-align: center;
 }
 .h1-highlight {
@@ -25,7 +40,7 @@ h1 {
 }
 
 h2 {
-    font: var(--h2);
+    font: 400 18px/80% 'Sora', sans-serif;
     text-align: center;
 }
 
@@ -49,10 +64,11 @@ svg {
     right: 0;
     transform-origin: center center;
     z-index: 1;
-    bottom: -400px;
-    width: 800px;
-    height: 800px;
     opacity: .125;
+
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
 }
 
 svg path {
@@ -61,53 +77,18 @@ svg path {
     fill: rgba(252, 189, 56, .065);
 }
 
-div.container2-1, div.container1-2 {
+div.container {
     margin: 0 auto;
-    width: 1216px;
+    width: 100vw;
     display: grid;
-    grid-template-rows: minmax(20vh, 20vh) 1fr;
+    grid-template-columns: 1fr;
     height: 100vh;
 }
-.container2-1 {
-    grid-template-columns: 60% 40%;
+.focus-alpha {
+    grid-template-rows: 10% 70% 20%;    
 }
-.container1-2 {
-    grid-template-columns: 40% 60%;
-}
-
-header {
-    grid-column: 1 / -1;
-    text-align: center;
-    font: var(--h1);
-
-    background: var(--gradient-1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-primary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.container-primary-wrapper {
-    width: 60%;
-    min-width: 60%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--white);
-    text-align: center;
-}
-.container-primary-wrapper:not(.form) {
-    transform: translateX(-1000px);
+.focus-beta {
+    grid-template-rows: 10% 20% 70%;
 }
 
 .form span,
@@ -116,13 +97,6 @@ header {
 }
 .form input {
     margin-bottom: 16px;
-}
-
-.container-primary-wrapper form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
 }
 
 .button-primary {
@@ -141,22 +115,6 @@ header {
 .button-primary:hover {
     box-shadow: 0px 18px 52px -16px rgba(252, 189, 56, 0.35);
     transform: translateY(-2px);
-}
-
-.container-secondary {
-    display: flex;
-    width: 100%;
-    z-index: 3;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-secondary-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    min-width: 60%;
 }
 
 .button-secondary {
@@ -178,7 +136,51 @@ header {
     box-shadow: 0px 18px 52px -16px rgba(252, 189, 56, 0.35);
 }
 
-.container-secondary-wrapper.form {
+/* ************ CONTAINER-ALPHA ************ */
+.container-alpha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.container-alpha-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    text-align: center;
+    padding: 24px;
+}
+.container-alpha-wrapper:not(.form) {
+    transform: translateX(-1000px);
+}
+
+.container-alpha-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+/* ************ CONTAINER-BETA ************ */
+.container-beta {
+    display: flex;
+    width: 100%;
+    z-index: 3;
+    justify-content: center;
+}
+
+.container-beta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.container-beta-wrapper.form {
     transform: translateX(1000px);
 }
 
@@ -186,9 +188,37 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1100px) {
     html, body, .button-primary, .button-secondary {
         font-size: 16px;
+    }
+
+    svg {
+        bottom: -400px;
+        width: 800px;
+        height: 800px;
+    }
+
+    div.container {
+        width: 1100px;
+    }
+
+    header {
+        font-size: 32px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 768px) {
+    div.container {
+        grid-template-rows: minmax(20vh, 20vh) 1fr;
+    }
+    div.focus-alpha {
+        grid-template-columns: 60% 40%;
+    
+    }
+    div.focus-beta {
+        grid-template-columns: 40% 60%;
     }
 
     svg {
@@ -197,17 +227,31 @@ header {
         bottom: -300px;
     }
 
-    div.container2-1, div.container1-2 {
-        width: 100vw;
+    .container-alpha-wrapper, .container-beta-wrapper  {
+        max-width: 60%;
     }
 
-    header {
-        font-size: 32px;
+    .container-beta-wrapper {
+        justify-content: center;
     }
 
-    .container-primary-wrapper {
-        width: 80%;
-        min-width: 80%;
+    h1 {
+        font: 600 36px/80% 'Sora', sans-serif;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 450px) {
+    html, body, .button-primary, .button-secondary {
+        font-size: 18px;
+    }
+    
+    .container-alpha-wrapper, .container-beta-wrapper {
+        max-width: 80%;
+    }
+
+    .container-beta-wrapper {
+        padding: 24px 0 0 0;
     }
 
     h1 {
@@ -215,56 +259,5 @@ header {
     }
     h2 {
         font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    div.container2-1, div.container1-2 {
-        grid-template-columns: 1fr;
-    }
-    div.container2-1 {
-        grid-template-rows: 10% 70% 20%;
-    }
-    div.container1-2 {
-        grid-template-rows: 10% 20% 70%;
-    }
-
-    svg {
-        width: 400px;
-        height: 400px;
-        bottom: -200px;
-    }
-
-    header {
-        font-size: 24px;
-    }
-
-    .container-primary-wrapper {
-        width: 60%;
-        min-width: 60%;
-    }
-
-    .container-secondary {
-        margin-top: 32px;
-        align-items: initial;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    html, body, .button-primary, .button-secondary {
-        font-size: 14px;
-    }
-
-    svg {
-        width: 300px;
-        height: 300px;
-        bottom: -150px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
-    h2 {
-        font-size: 18px;
     }
 }
