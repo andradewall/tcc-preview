@@ -1,12 +1,12 @@
 @keyframes animateLogo {
     0% {
-        stroke-dasharray: 10;
+        stroke-dasharray: 300;
     }
     50% {
-        stroke-dasharray: 100;
+        stroke-dasharray: 1000;
     }
     100% {
-        stroke-dasharray: 10;
+        stroke-dasharray: 300;
     }
 }
 

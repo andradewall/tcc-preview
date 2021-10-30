@@ -55,17 +55,18 @@ svg {
     margin: auto;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    bottom: -400px;
     transform-origin: center center;
     z-index: 1;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     opacity: .125;
 }
 
 svg path {
     animation: 5s animateLogo ease 0s forwards infinite;
+    stroke-width: 3;
+    fill: rgba(252, 189, 56, .065);
 }
 
 
