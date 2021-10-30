@@ -106,7 +106,3 @@
 .fade-out-to-up {
     animation: 1.5s fadeOutToUp ease 0s forwards;
 }
-
-.move-up {
-    animation: 1.5s moveUp ease 0s forwards;
-}
