@@ -55,9 +55,9 @@ svg {
     margin: auto;
     left: 0;
     right: 0;
-    bottom: -400px;
     transform-origin: center center;
     z-index: 1;
+    bottom: -400px;
     width: 800px;
     height: 800px;
     opacity: .125;
@@ -212,7 +212,7 @@ header {
     svg {
         width: 600px;
         height: 600px;
-        /* bottom: -300px; */
+        bottom: -300px;
     }
 
     div.container2-1, div.container1-2 {
@@ -250,7 +250,7 @@ header {
     svg {
         width: 400px;
         height: 400px;
-        /* bottom: -200px; */
+        bottom: -200px;
     }
 
     /* svg path {
@@ -279,7 +279,7 @@ header {
     svg {
         width: 300px;
         height: 300px;
-        /* bottom: -150px; */
+        bottom: -150px;
     }
     
     h1 {
