@@ -18,6 +18,7 @@ html, body {
 
 h1 {
     font: var(--h1);
+    text-align: center;
 }
 .h1-highlight {
     color: var(--cor-primaria);
@@ -25,6 +26,7 @@ h1 {
 
 h2 {
     font: var(--h2);
+    text-align: center;
 }
 
 input {
@@ -105,15 +107,15 @@ header {
     text-align: center;
 }
 .container-primary-wrapper:not(.form) {
-    /* justify-content: flex-end; */
-    /* margin-bottom: 144px; */
     transform: translateX(-1000px);
 }
 
 .form span,
-.form label,
+.form label {
+    margin: 16px 0;
+}
 .form input {
-    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .container-primary-wrapper form {
@@ -155,7 +157,6 @@ header {
     align-items: center;
     width: 60%;
     min-width: 60%;
-    text-align: center;
 }
 
 .button-secondary {
@@ -222,10 +223,10 @@ header {
         grid-template-columns: 1fr;
     }
     div.container2-1 {
-        grid-template-rows: 20% 60% 20%;
+        grid-template-rows: 10% 70% 20%;
     }
     div.container1-2 {
-        grid-template-rows: 20% 20% 60%;
+        grid-template-rows: 10% 20% 70%;
     }
 
     svg {
@@ -249,7 +250,7 @@ header {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
     html, body, .button-primary, .button-secondary {
         font-size: 14px;
     }
