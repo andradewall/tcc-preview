@@ -215,7 +215,7 @@ div.container {
 
 @media screen and (min-width: 900px) {
     div.container {
-        grid-template-rows: minmax(20vh, 20vh) 1fr;
+        grid-template-rows: minmax(10vh, 20vh) 1fr;
     }
     div.focus-alpha {
         grid-template-columns: 60% 40%;
