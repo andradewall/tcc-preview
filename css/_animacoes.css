@@ -85,7 +85,7 @@
 @keyframes color {
     0% {}
     100% {
-        fill: url(#gradient-left);
+        fill: url("#gradient-left");
     }
 }
 
