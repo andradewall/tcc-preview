@@ -178,6 +178,12 @@ div.container {
     align-items: center;
     padding: 24px;
 }
+.container-beta-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
 .container-beta-wrapper.form {
     transform: translateX(1000px);
 }
