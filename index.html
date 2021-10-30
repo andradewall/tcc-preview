@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>Acesse a Crypto Manager</title>
 </head>
@@ -21,10 +21,10 @@
             <p>Crypto<br/>Manager</p>
         </header>
         
-        <section class="container-primario">
+        <section class="container-primary">
             
-            <div class="container-primario-wrapper form">
-                <h1>Ainda não tem<br/>uma <span class="h1-destaque">carteira</span>?</h1>
+            <div class="container-primary-wrapper form">
+                <h1>Ainda não tem<br/>uma <span class="h1-highlight">carteira</span>?</h1>
                 <span>Inicie sua carteira com a gente de graça</span>
                 <form>
                     <label for="nome">Seu nome</label>
@@ -36,25 +36,25 @@
                     
                 <span>Você receberá a senha por e-mail</span>
 
-                <button type="button" class="botao-primario">Criar agora</button>
+                <button type="button" class="button-primary">Criar agora</button>
             </div>
 
-            <div class="container-primario-wrapper oculto">
+            <div class="container-primary-wrapper hidden">
                 <h2>Ainda não tem uma carteira?</h2>
-                <button type="button" class="botao-secundario botao-criar">Criar</button>
+                <button type="button" class="button-secondary botao-criar">Criar</button>
             </div>
 
         </section>
     
-        <section class="container-secundario">
+        <section class="container-secondary">
 
-            <div class="container-secundario-wrapper">
+            <div class="container-secondary-wrapper">
                 <h2>Já tem uma carteira?</h2>
-                <button type="button" class="botao-secundario botao-acessar">Acessar</button>
+                <button type="button" class="button-secondary botao-acessar">Acessar</button>
             </div>
 
-            <div class="container-secundario-wrapper form oculto">
-                <h1>Já possui<br/>uma <span class="h1-destaque">carteira</span>?</h1>
+            <div class="container-secondary-wrapper form hidden">
+                <h1>Já possui<br/>uma <span class="h1-highlight">carteira</span>?</h1>
                 <span>Suas criptomoedas estão te aguardando</span>
                 <form>
                     <label for="email">Seu e-mail</label>
@@ -64,7 +64,7 @@
                     <input type="password" name="senha" placeholder="Digite aqui sua senha">
                 </form>
                     
-                <button type="button" class="botao-primario">Acessar</button>
+                <button type="button" class="button-primary">Acessar</button>
             </div>
         </section>
         
@@ -84,13 +84,15 @@
         const botaoAcessar = document.querySelector(".botao-acessar");
         const botaoCriar = document.querySelector(".botao-criar");
 
-        const formRegistrar = document.querySelector(".container-primario-wrapper.form");
-        const formAcessar = document.querySelector(".container-secundario-wrapper.form.oculto");
+        const formRegistrar = document.querySelector(".container-primary-wrapper.form");
+        const formAcessar = document.querySelector(".container-secondary-wrapper.form.hidden");
 
-        const divBotaoAcessar = document.querySelector(".container-secundario-wrapper:not(.form)");
-        const divBotaoRegistrar = document.querySelector(".container-primario-wrapper.oculto");
+        const divBotaoAcessar = document.querySelector(".container-secondary-wrapper:not(.form)");
+        const divBotaoRegistrar = document.querySelector(".container-primary-wrapper.hidden");
 
         botaoAcessar.addEventListener("click", () => {
+
+            formRegistrar.classList.remove("fade-in-to-right");
             formRegistrar.classList.add("fade-out-to-left");
             divBotaoAcessar.classList.add("fade-out-to-right");
 
@@ -98,14 +100,14 @@
             container.classList.add("container1-2");
             
             setTimeout(() => {
-                formAcessar.classList.remove("oculto");
+                formAcessar.classList.remove("hidden");
                 formAcessar.classList.add("fade-in-to-left");
 
-                divBotaoRegistrar.classList.remove("oculto");
+                divBotaoRegistrar.classList.remove("hidden");
                 divBotaoRegistrar.classList.add("fade-in-to-right");
 
-                divBotaoAcessar.classList.add("oculto");
-                formRegistrar.classList.add("oculto");
+                divBotaoAcessar.classList.add("hidden");
+                formRegistrar.classList.add("hidden");
             }, 1000);
         });
 
@@ -123,14 +125,14 @@
             container.classList.add("container2-1");
             
             setTimeout(() => {
-                formRegistrar.classList.remove("oculto");
+                formRegistrar.classList.remove("hidden");
                 formRegistrar.classList.add("fade-in-to-right");
 
-                divBotaoAcessar.classList.remove("oculto");
+                divBotaoAcessar.classList.remove("hidden");
                 divBotaoAcessar.classList.add("fade-in-to-left");
 
-                divBotaoRegistrar.classList.add("oculto");
-                formAcessar.classList.add("oculto");
+                divBotaoRegistrar.classList.add("hidden");
+                formAcessar.classList.add("hidden");
             }, 1000);
         });        
     </script>
