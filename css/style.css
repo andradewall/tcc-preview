@@ -172,14 +172,12 @@ div.container {
     z-index: 3;
     justify-content: center;
 }
-
 .container-beta-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px;
 }
-
 .container-beta-wrapper.form {
     transform: translateX(1000px);
 }
