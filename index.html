@@ -16,14 +16,14 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container2-1">
 
         <header class="header">
             <p>Crypto<br/>Manager</p>
         </header>
         
         <section class="container-primario">
-            <div class="container-primario-wrapper">
+            <div class="container-primario-wrapper form">
                 <h1>Ainda não tem<br/>uma <span class="h1-destaque">carteira</span>?</h1>
                 <span>Inicie sua carteira com a gente de graça</span>
                 <form>
@@ -38,48 +38,94 @@
 
                 <button type="button" class="botao-primario">Criar agora</button>
             </div>
+
+            <div class="container-primario-wrapper oculto">
+                <h2>Ainda não tem uma carteira?</h2>
+                <button type="button" class="botao-secundario botao-criar">Criar</button>
+            </div>
         </section>
     
         <section class="container-secundario">
             <div class="container-secundario-wrapper">
                 <h2>Já tem uma carteira?</h2>
-                <button type="button" class="botao-secundario">Acessar</button>
+                <button type="button" class="botao-secundario botao-acessar">Acessar</button>
+            </div>
+
+            <div class="container-secundario-wrapper form oculto">
+                <h1>Já possui<br/>uma <span class="h1-destaque">carteira</span>?</h1>
+                <span>Suas criptomoedas estão te aguardando</span>
+                <form>
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" name="email" placeholder="Digite aqui seu e-mail">
+                    
+                    <label for="nome">Sua senha</label>
+                    <input type="password" name="senha" placeholder="Digite aqui sua senha">
+                </form>
+                    
+                <button type="button" class="botao-primario">Acessar</button>
             </div>
         </section>
         
         <!-- SVG CRYPTO MANAGER LOGO -->
-        <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="cm-logo">
-            <path id="cm-logo_2" fill-rule="evenodd" clip-rule="evenodd" d="M400 800C620.914 800 800 620.914 800 400C800 179.086 620.914 0 400 0C179.086 0 0 179.086 0 400C0 620.914 179.086 800 400 800ZM349.143 311.429C359.429 327.429 363.429 354.857 363.429 354.857H330.286C330.286 354.857 328.409 342.231 325.143 334.857C320.189 323.672 315.307 317.877 305.714 310.286C294.178 301.156 287.429 299.429 270.857 296C254.286 292.571 229.714 294.286 211.429 305.143C193.143 316 187.393 324.984 178.857 342.286C170.493 359.241 169.28 370.808 169.143 389.714C168.989 410.942 170.273 424.295 180.571 442.857C192.854 464.996 208.571 479.429 229.714 485.143C250.857 490.857 278.857 487.429 292 482.286C305.143 477.143 316.854 468.928 325.714 454.286C331.341 444.987 334.857 428 334.857 428H367.429C367.429 428 363.867 448.263 358.286 460C349.783 477.882 345.143 482.857 325.714 498.857C306.286 514.857 270.857 517.387 270.857 517.387V556.571H229.714V515.429C229.714 515.429 215.814 512.528 207.429 509.143C192.334 503.049 184.261 497.614 172.571 486.286C157.317 471.503 151.26 459.963 144 440C137.204 421.313 135.864 409.599 136 389.714C136.153 367.438 137.821 354.076 146.857 333.714C156.471 312.05 166.286 299.429 184 285.714C201.714 272 229.714 267.066 229.714 267.066V226.286H270.857V265.714C270.857 265.714 289.478 267.802 300.571 272C323.421 280.648 338.857 295.429 349.143 311.429ZM414.286 512H444V313.714L509.714 462.286H549.143L614.857 313.714V512H647.429V412.571V371.429V272H604L533.714 432H528L456.571 272H414.286V371.429V412.571V512ZM750 400C750 210.645 589.355 50 400 50C210.645 50 50 210.645 50 400C50 589.355 210.645 750 400 750C589.355 750 750 589.355 750 400ZM100 400C100 234.315 234.315 100 400 100C565.685 100 700 234.315 700 400C700 565.685 565.685 700 400 700C234.315 700 100 565.685 100 400Z" fill="url(#paint0_linear_12:11)"/>
+        <svg width="802" height="802" viewBox="0 0 802 802" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Logo">
+            <path id="cm-logo" fill-rule="evenodd" clip-rule="evenodd" d="M401 801C621.914 801 801 621.914 801 401C801 180.086 621.914 1 401 1C180.086 1 1 180.086 1 401C1 621.914 180.086 801 401 801ZM350.143 312.429C360.429 328.429 364.429 355.857 364.429 355.857H331.286C331.286 355.857 329.409 343.231 326.143 335.857C321.189 324.672 316.307 318.877 306.714 311.286C295.178 302.156 288.429 300.429 271.857 297C255.286 293.571 230.714 295.286 212.429 306.143C194.143 317 188.393 325.984 179.857 343.286C171.493 360.241 170.28 371.808 170.143 390.714C169.989 411.942 171.273 425.295 181.571 443.857C193.854 465.996 209.571 480.429 230.714 486.143C251.857 491.857 279.857 488.429 293 483.286C306.143 478.143 317.854 469.928 326.714 455.286C332.341 445.987 335.857 429 335.857 429H368.429C368.429 429 364.867 449.262 359.286 461C350.783 478.882 346.143 483.857 326.714 499.857C307.286 515.857 271.857 518.387 271.857 518.387V557.571H230.714V516.429C230.714 516.429 216.814 513.528 208.429 510.143C193.334 504.049 185.261 498.614 173.571 487.286C158.317 472.503 152.26 460.963 145 441C138.204 422.313 136.864 410.599 137 390.714C137.153 368.438 138.821 355.076 147.857 334.714C157.471 313.05 167.286 300.429 185 286.714C202.714 273 230.714 268.066 230.714 268.066V227.286H271.857V266.714C271.857 266.714 290.478 268.802 301.571 273C324.421 281.648 339.857 296.429 350.143 312.429ZM415.286 513H445V314.714L510.714 463.286H550.143L615.857 314.714V513H648.429V413.571V372.429V273H605L534.714 433H529L457.571 273H415.286V372.429V413.571V513ZM751 401C751 211.645 590.355 51 401 51C211.645 51 51 211.645 51 401C51 590.355 211.645 751 401 751C590.355 751 751 590.355 751 401Z" stroke="#FCBD38"/>
             </g>
-            <defs>
-            <linearGradient id="paint0_linear_12:11" x1="800" y1="400" x2="0" y2="400" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FCBD38"/>
-            <stop offset="1" stop-color="#F7931E" stop-opacity="0"/>
-            </linearGradient>
-            </defs>
             </svg>
-            
-        </div>
+        <!-- <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="cm-logo">
+        <path id="cm-logo_2" fill-rule="evenodd" clip-rule="evenodd" d="M400 800C620.914 800 800 620.914 800 400C800 179.086 620.914 0 400 0C179.086 0 0 179.086 0 400C0 620.914 179.086 800 400 800ZM349.143 311.429C359.429 327.429 363.429 354.857 363.429 354.857H330.286C330.286 354.857 328.409 342.231 325.143 334.857C320.189 323.672 315.307 317.877 305.714 310.286C294.178 301.156 287.429 299.429 270.857 296C254.286 292.571 229.714 294.286 211.429 305.143C193.143 316 187.393 324.984 178.857 342.286C170.493 359.241 169.28 370.808 169.143 389.714C168.989 410.942 170.273 424.295 180.571 442.857C192.854 464.996 208.571 479.429 229.714 485.143C250.857 490.857 278.857 487.429 292 482.286C305.143 477.143 316.854 468.928 325.714 454.286C331.341 444.987 334.857 428 334.857 428H367.429C367.429 428 363.867 448.263 358.286 460C349.783 477.882 345.143 482.857 325.714 498.857C306.286 514.857 270.857 517.387 270.857 517.387V556.571H229.714V515.429C229.714 515.429 215.814 512.528 207.429 509.143C192.334 503.049 184.261 497.614 172.571 486.286C157.317 471.503 151.26 459.963 144 440C137.204 421.313 135.864 409.599 136 389.714C136.153 367.438 137.821 354.076 146.857 333.714C156.471 312.05 166.286 299.429 184 285.714C201.714 272 229.714 267.066 229.714 267.066V226.286H270.857V265.714C270.857 265.714 289.478 267.802 300.571 272C323.421 280.648 338.857 295.429 349.143 311.429ZM414.286 512H444V313.714L509.714 462.286H549.143L614.857 313.714V512H647.429V412.571V371.429V272H604L533.714 432H528L456.571 272H414.286V371.429V412.571V512ZM750 400C750 210.645 589.355 50 400 50C210.645 50 50 210.645 50 400C50 589.355 210.645 750 400 750C589.355 750 750 589.355 750 400ZM100 400C100 234.315 234.315 100 400 100C565.685 100 700 234.315 700 400C700 565.685 565.685 700 400 700C234.315 700 100 565.685 100 400Z" fill="url(#gradient-right)"/>
+        </g>
+        <defs>
+        <linearGradient id="gradient-right" x1="800" y1="400" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FCBD38"/>
+        <stop offset="1" stop-color="#F7931E" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="gradient-left" x1="800" y1="400" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F7931E" stop-opacity="0"/>
+        <stop offset="1" stop-color="#FCBD38"/>
+        </linearGradient>
+        <linearGradient id="gradient-down" x1="390" y1="800" x2="400" y2="5.74568e-06" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FCBD38"/>
+        <stop offset="1" stop-color="#F7931E" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+        </svg> -->
+    </div>
         
     <script type="text/javascript">
     
-        let botaoSecundario = document.querySelector(".botao-secundario");
-        let containerSecundario = document.querySelector(".container-secundario");
-        let containerPrimario = document.querySelector(".container-primario");
+        let container = document.querySelector('.container2-1');
+        let botaoAcessar = document.querySelector(".botao-acessar");
+        let containerSecundario = document.querySelector(".container-secundario-wrapper");
+        let containerPrimario = document.querySelector(".container-primario-wrapper");
         let header = document.querySelector(".header");
-        let svg = document.querySelector("svg path");
+        let svg = document.querySelector("svg");
+        let svgPath = document.querySelector("svg path");
 
-        botaoSecundario.addEventListener("click", () => {
-            // svg.classList.add("fade-out-to-down");
+        let formOculto = document.querySelector(".container-secundario-wrapper.form.oculto");
+        let divBotaoOculto = document.querySelector(".container-primario-wrapper.oculto");
+
+        botaoAcessar.addEventListener("click", () => {
+            svg.classList.add("move-up");
+            svgPath.classList.add("color");
             containerSecundario.classList.add("fade-out-to-right");
             containerPrimario.classList.add("fade-out-to-left");
-            header.classList.add("fade-out-to-up");
-            // setTimeout(() => {
-            //     svg.classList.remove("fade-out-to-down")
-            //     svg.classList.add("fade-in-to-down");
-            // }, 1000);
+            // header.classList.add("fade-out-to-up");
+
+            container.classList.remove("container2-1");
+            container.classList.add("container1-2");
+            
+            setTimeout(() => {
+                formOculto.classList.remove("oculto");
+                formOculto.classList.add("fade-in-to-left");
+                divBotaoOculto.classList.remove("oculto");
+                divBotaoOculto.classList.add("fade-in-to-right");
+                containerSecundario.classList.add("oculto");
+                containerPrimario.classList.add("oculto");
+            }, 1000);
         });
+
 
     </script>
 
