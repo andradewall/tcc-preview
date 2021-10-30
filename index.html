@@ -22,6 +22,7 @@
         </header>
         
         <section class="container-primario">
+            
             <div class="container-primario-wrapper form">
                 <h1>Ainda não tem<br/>uma <span class="h1-destaque">carteira</span>?</h1>
                 <span>Inicie sua carteira com a gente de graça</span>
@@ -42,9 +43,11 @@
                 <h2>Ainda não tem uma carteira?</h2>
                 <button type="button" class="botao-secundario botao-criar">Criar</button>
             </div>
+
         </section>
     
         <section class="container-secundario">
+
             <div class="container-secundario-wrapper">
                 <h2>Já tem uma carteira?</h2>
                 <button type="button" class="botao-secundario botao-acessar">Acessar</button>
@@ -71,51 +74,63 @@
             <path id="cm-logo" fill-rule="evenodd" clip-rule="evenodd" d="M401 801C621.914 801 801 621.914 801 401C801 180.086 621.914 1 401 1C180.086 1 1 180.086 1 401C1 621.914 180.086 801 401 801ZM350.143 312.429C360.429 328.429 364.429 355.857 364.429 355.857H331.286C331.286 355.857 329.409 343.231 326.143 335.857C321.189 324.672 316.307 318.877 306.714 311.286C295.178 302.156 288.429 300.429 271.857 297C255.286 293.571 230.714 295.286 212.429 306.143C194.143 317 188.393 325.984 179.857 343.286C171.493 360.241 170.28 371.808 170.143 390.714C169.989 411.942 171.273 425.295 181.571 443.857C193.854 465.996 209.571 480.429 230.714 486.143C251.857 491.857 279.857 488.429 293 483.286C306.143 478.143 317.854 469.928 326.714 455.286C332.341 445.987 335.857 429 335.857 429H368.429C368.429 429 364.867 449.262 359.286 461C350.783 478.882 346.143 483.857 326.714 499.857C307.286 515.857 271.857 518.387 271.857 518.387V557.571H230.714V516.429C230.714 516.429 216.814 513.528 208.429 510.143C193.334 504.049 185.261 498.614 173.571 487.286C158.317 472.503 152.26 460.963 145 441C138.204 422.313 136.864 410.599 137 390.714C137.153 368.438 138.821 355.076 147.857 334.714C157.471 313.05 167.286 300.429 185 286.714C202.714 273 230.714 268.066 230.714 268.066V227.286H271.857V266.714C271.857 266.714 290.478 268.802 301.571 273C324.421 281.648 339.857 296.429 350.143 312.429ZM415.286 513H445V314.714L510.714 463.286H550.143L615.857 314.714V513H648.429V413.571V372.429V273H605L534.714 433H529L457.571 273H415.286V372.429V413.571V513ZM751 401C751 211.645 590.355 51 401 51C211.645 51 51 211.645 51 401C51 590.355 211.645 751 401 751C590.355 751 751 590.355 751 401Z" stroke="#FCBD38"/>
             </g>
             </svg>
-    </div>
+
+    </div> <!-- /.container2-1 -->
         
     <script type="text/javascript">
     
-        let container = document.querySelector('.container2-1');
-        let botaoAcessar = document.querySelector(".botao-acessar");
-        let botaoCriar = document.querySelector(".botao-criar");
-        let containerSecundario = document.querySelector(".container-secundario-wrapper");
-        let containerPrimario = document.querySelector(".container-primario-wrapper");
-        let header = document.querySelector(".header");
+        const container = document.querySelector('.container2-1');
 
-        let formOculto = document.querySelector(".container-secundario-wrapper.form.oculto");
-        let divBotaoOculto = document.querySelector(".container-primario-wrapper.oculto");
+        const botaoAcessar = document.querySelector(".botao-acessar");
+        const botaoCriar = document.querySelector(".botao-criar");
+
+        const formRegistrar = document.querySelector(".container-primario-wrapper.form");
+        const formAcessar = document.querySelector(".container-secundario-wrapper.form.oculto");
+
+        const divBotaoAcessar = document.querySelector(".container-secundario-wrapper:not(.form)");
+        const divBotaoRegistrar = document.querySelector(".container-primario-wrapper.oculto");
 
         botaoAcessar.addEventListener("click", () => {
-            containerSecundario.classList.toggle("fade-out-to-right");
-            containerPrimario.classList.toggle("fade-out-to-left");
+            formRegistrar.classList.add("fade-out-to-left");
+            divBotaoAcessar.classList.add("fade-out-to-right");
 
-            container.classList.toggle("container2-1");
-            container.classList.toggle("container1-2");
+            container.classList.remove("container2-1");
+            container.classList.add("container1-2");
             
             setTimeout(() => {
-                formOculto.classList.toggle("oculto");
-                formOculto.classList.toggle("fade-in-to-left");
-                divBotaoOculto.classList.toggle("oculto");
-                divBotaoOculto.classList.toggle("fade-in-to-right");
-                containerSecundario.classList.toggle("oculto");
-                containerPrimario.classList.toggle("oculto");
+                formAcessar.classList.remove("oculto");
+                formAcessar.classList.add("fade-in-to-left");
+
+                divBotaoRegistrar.classList.remove("oculto");
+                divBotaoRegistrar.classList.add("fade-in-to-right");
+
+                divBotaoAcessar.classList.add("oculto");
+                formRegistrar.classList.add("oculto");
             }, 1000);
         });
 
         botaoCriar.addEventListener("click", () => {
-            containerPrimario.classList.toggle("fade-out-to-left");
-            containerSecundario.classList.toggle("fade-out-to-right");
+            formRegistrar.classList.remove("fade-out-to-left");
+            divBotaoAcessar.classList.remove("fade-out-to-right");
 
-            container.classList.toggle("container2-1");
-            container.classList.toggle("container1-2");
+            divBotaoRegistrar.classList.remove("fade-in-to-right");
+            divBotaoRegistrar.classList.add("fade-out-to-left");
+
+            formAcessar.classList.remove("fade-in-to-left");
+            formAcessar.classList.add("fade-out-to-right");
+
+            container.classList.remove("container1-2");
+            container.classList.add("container2-1");
             
             setTimeout(() => {
-                formOculto.classList.toggle("oculto");
-                formOculto.classList.toggle("fade-in-to-left");
-                divBotaoOculto.classList.toggle("oculto");
-                divBotaoOculto.classList.toggle("fade-in-to-right");
-                containerSecundario.classList.toggle("oculto");
-                containerPrimario.classList.toggle("oculto");
+                formRegistrar.classList.remove("oculto");
+                formRegistrar.classList.add("fade-in-to-right");
+
+                divBotaoAcessar.classList.remove("oculto");
+                divBotaoAcessar.classList.add("fade-in-to-left");
+
+                divBotaoRegistrar.classList.remove("oculto");
+                formAcessar.classList.add("oculto");
             }, 1000);
         });        
     </script>
