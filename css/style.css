@@ -178,7 +178,7 @@ div.container {
     align-items: center;
     padding: 24px;
 }
-.container-beta-wrapper form {
+.container-alpha-wrapper form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -219,7 +219,6 @@ div.container {
     }
     div.focus-alpha {
         grid-template-columns: 60% 40%;
-    
     }
     div.focus-beta {
         grid-template-columns: 40% 60%;
