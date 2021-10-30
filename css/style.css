@@ -153,15 +153,15 @@ div.container {
     text-align: center;
     padding: 24px;
 }
-.container-alpha-wrapper:not(.form) {
-    transform: translateX(-1000px);
-}
-
 .container-alpha-wrapper form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+}
+
+.container-alpha-wrapper:not(.form) {
+    transform: translateX(-1000px);
 }
 
 
