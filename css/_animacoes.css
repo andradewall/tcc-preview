@@ -110,7 +110,3 @@
 .move-up {
     animation: 1.5s moveUp ease 0s forwards;
 }
-
-.color {
-    animation: 1.5s color ease 1s forwards;
-}
