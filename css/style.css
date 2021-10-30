@@ -85,10 +85,10 @@ div.container {
     height: 100vh;
 }
 .focus-alpha {
-    grid-template-rows: 10% 70% 20%;    
+    grid-template-rows: 10vh 70vh 20vh;    
 }
 .focus-beta {
-    grid-template-rows: 10% 20% 70%;
+    grid-template-rows: 10vh 20vh 70vh;
 }
 
 .form span,
