@@ -40,16 +40,6 @@ input:active, input:focus {
     outline: none;
 }
 
-/* svg {
-    position: absolute;
-    bottom: -400px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    transform-origin: center center;
-    z-index: 1;
-} */
 svg {
     position: absolute;
     margin: auto;
@@ -69,10 +59,8 @@ svg path {
     fill: rgba(252, 189, 56, .065);
 }
 
-
 div.container2-1, div.container1-2 {
     margin: 0 auto;
-    /* width: 100%; */
     width: 1216px;
     display: grid;
     grid-template-rows: minmax(20vh, 20vh) 1fr;
@@ -99,10 +87,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-/* ======================================================================== */
-/* TELA REGISTRO */
-/* ======================================================================== */
 
 .container-primario {
     display: flex;
@@ -157,7 +141,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* CONTAINER SECUNDARIO */
 .container-secundario {
     display: flex;
     width: 100%;
@@ -195,8 +178,6 @@ header {
 }
 
 .container-secundario-wrapper.form {
-    /* justify-content: flex-end; */
-    /* margin-bottom: 64px; */
     transform: translateX(1000px);
 }
 
@@ -253,10 +234,6 @@ header {
         bottom: -200px;
     }
 
-    /* svg path {
-        fill: url(#gradient-down); 
-    } */
-
     header {
         font-size: 24px;
     }
@@ -268,6 +245,7 @@ header {
 
     .container-secundario {
         margin-top: 32px;
+        align-items: initial;
     }
 }
 
@@ -289,8 +267,3 @@ header {
         font-size: 18px;
     }
 }
-
-
-/* ======================================================================== */
-/* TELA ACESSO */
-/* ======================================================================== */
