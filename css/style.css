@@ -8,8 +8,9 @@
 }
 
 html, body {
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
-    height: auto;
     background-color: var(--black);
     color: var(--white);
     font: 400 16px/140% 'Source Sans Pro', sans-serif;
