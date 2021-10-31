@@ -8,8 +8,8 @@
 }
 
 html, body {
-    height: 100%;
     width: 100vw;
+    height: auto;
     background-color: var(--black);
     color: var(--white);
     font: 400 16px/140% 'Source Sans Pro', sans-serif;
